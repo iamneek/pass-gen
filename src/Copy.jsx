@@ -7,7 +7,7 @@ const Copy = ({ generatedPass }) => {
     if (Modall) {
       setTimeout(() => {
         setModel(false);
-      }, 1000);
+      }, 800);
     }
   });
   return (
