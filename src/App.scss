@@ -1,0 +1,213 @@
+.heading_title {
+  font-family: Poppins;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-color: #663dff;
+  background-image: linear-gradient(
+    319deg,
+    #663dff 0%,
+    #aa00ff 37%,
+    #cc4499 100%
+  );
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+  span {
+    background-image: none;
+    color: aliceblue;
+  }
+}
+
+.App {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.password_input {
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 0.3em;
+  width: 20em;
+  text-align: center;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  height: 3em;
+  outline: none;
+  font-family: Plus Jakarta Sans;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+::placeholder {
+  color: #a3a3a3;
+  font-family: Plus Jakarta Sans;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.copy_btn {
+  background-color: #ffd700;
+  width: 4em;
+  border-radius: 0.3em;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4.05em;
+  cursor: pointer;
+  border: none;
+}
+.fields {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.options_pass {
+  color: #f5f5f5;
+  font-family: poppins;
+  font-weight: 500;
+  display: flex;
+  gap: 3em;
+  flex-direction: column;
+
+  label {
+    position: relative;
+    border: 2px solid #ffd700;
+    font-size: large;
+    border-radius: 0.2em;
+    padding: 10px 50px;
+    cursor: pointer;
+  }
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.optionss {
+  margin-top: 1em;
+}
+
+input[type="checkbox"]:checked + label {
+  background-color: #ffd700;
+  color: #121212;
+}
+
+.additions {
+  display: flex;
+  gap: 1em;
+}
+
+.password_length_option {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.range_pass {
+  cursor: pointer;
+  appearance: none;
+  --webkit-appearance: none;
+  width: 100%;
+  height: 2px;
+  background-color: #2b2b2b;
+  border-radius: 1em;
+  position: relative;
+}
+
+.range_pass::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #ffd700;
+}
+
+.password_length_option {
+  position: relative;
+}
+.modal {
+  color: #191919;
+  font-family: poppins;
+  position: absolute;
+  background-color: beige;
+  width: 16em;
+  padding: 1em;
+  border-radius: 0.5em;
+  bottom: 1em;
+  right: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  transition: 0.5s ease-in-out;
+  animation: 1s modalAnimation linear;
+}
+
+@keyframes modalAnimation {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  50% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .heading_title {
+    display: inline-block;
+    font-size: 1.8em;
+  }
+  .password_input {
+    width: 18em;
+  }
+
+  .options_pass {
+    label {
+      font-size: small;
+    }
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .heading_title {
+    display: inline-block;
+    font-size: 1.7em;
+  }
+  .password_input {
+    width: 16em;
+  }
+
+  .options_pass {
+    label {
+      font-size: smaller;
+      padding: 10px 45px;
+    }
+  }
+}
+@media only screen and (max-width: 360px) {
+  .heading_title {
+    display: inline-block;
+    font-size: 1.5em;
+  }
+  .password_input {
+    width: 14em;
+  }
+
+  .options_pass {
+    label {
+      padding: 10px 40px;
+    }
+  }
+}
